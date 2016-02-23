@@ -70,7 +70,7 @@ class Chosen extends AbstractChosen
     @form_field_jq.trigger("chosen:ready", {chosen: this})
 
   register_observers: ->
-    @container.bind 'touchstart.chosen', (evt) => this.container_mousedown(evt); evt.preventDefault()
+    @container.bind 'touchstart.chosen', (evt) => this.container_mousedown(evt); return 
     @container.bind 'touchend.chosen', (evt) => this.container_mouseup(evt); evt.preventDefault()
 
     @container.bind 'mousedown.chosen', (evt) => this.container_mousedown(evt); return
